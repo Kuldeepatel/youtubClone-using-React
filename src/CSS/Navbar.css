@@ -1,0 +1,23 @@
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    width: 100%;
+  }
+  
+  img {
+    height: 45px;
+  }
+  .header{
+    color: red;
+    font-size: 40px;
+    margin-left: 250px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  

@@ -1,0 +1,42 @@
+.feed-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+  }
+  
+  @media (min-width: 768px) {
+    .feed-container {
+      flex-direction: row;
+    }
+  }
+  
+  .sidebar-container {
+    height: auto;
+    border-right: 1px solid #3d3d3d;
+    padding: 0 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .sidebar-container {
+      height: 92vh;
+      padding: 0 2rem;
+    }
+  }
+  
+  .videos-container {
+    padding: 1rem;
+    overflow-y: auto;
+    height: 90vh;
+    flex: 2;
+  }
+  
+
+  
+  .highlight {
+   
+    color: #FC1503;
+  }
+  
+ 
+  

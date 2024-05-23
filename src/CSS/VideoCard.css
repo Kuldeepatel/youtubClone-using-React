@@ -1,0 +1,43 @@
+.video-card {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  
+ 
+  .video-card.md {
+    width: 320px;
+  }
+  
+  .video-card-media {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .video-card-media.sm {
+    width: 350px;
+  }
+  
+  .video-card-content {
+    background-color: white;
+    height: 50px;
+    padding: 16px;
+  }
+  
+  .video-card-title {
+    color: black;
+  }
+  
+  .video-card-channel {
+    color: black;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+  }
+  
+  .video-card-channel .check-icon {
+    font-size: 10px;
+    color: black;
+    margin-left: 5px;
+  }
+  

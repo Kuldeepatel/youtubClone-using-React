@@ -1,0 +1,63 @@
+
+.video-detail-container {
+    min-height: 95vh;
+  }
+  
+  .video-detail-stack {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .video-detail-stack.row {
+    flex-direction: row;
+  }
+  
+  .video-player-container {
+    flex: 1;
+  }
+  
+  .video-player-wrapper {
+    width: 100%;
+    position: sticky;
+    top: 86px;
+  }
+  
+  .video-title {
+    color: #fff;
+    font-weight: bold;
+    padding: 16px;
+  }
+  
+  .video-info {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 8px 16px;
+  }
+  
+  .video-info .channel-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .video-info .channel-link .check-icon {
+    font-size: 12px;
+    color: gray;
+    margin-left: 5px;
+  }
+  
+  .video-stats {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    opacity: 0.7;
+  }
+  
+  .related-videos {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

@@ -1,0 +1,24 @@
+.search-feed-container {
+    padding: 16px;
+    min-height: 95vh;
+    color: white;
+  }
+  
+  .search-title {
+    font-weight: 900;
+    margin-bottom: 24px;
+    margin-left: 100px;
+  }
+  
+  .highlight {
+    color: #FC1503;
+  }
+  
+  .videos-section {
+    display: flex;
+  }
+  
+  .spacer {
+    margin-right: 100px;
+  }
+  
