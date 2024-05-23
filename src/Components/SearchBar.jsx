@@ -7,7 +7,7 @@ const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
-  const onhandleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (searchTerm) {
@@ -17,7 +17,7 @@ const SearchBar = () => {
   };
 
   return (
-    <form className="search-bar-container" onSubmit={onhandleSubmit}>
+    <form className="search-bar-container" onSubmit={handleSubmit}>
       <input
         className="search-bar"
         placeholder="Search..."

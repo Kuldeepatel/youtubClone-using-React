@@ -9,25 +9,16 @@ const Feed = () => {
   const [videos, setVideos] = useState(null);
 
   useEffect(() => {
-    setVideos(null);
-
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
       .then((data) => setVideos(data.items))
+      .catch((error) => console.error("Error fetching videos:", error));
   }, [selectedCategory]);
 
   return (
     <div className="feed-container">
-      <div className="sidebar-container">
-        <SideBar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
-        
-      
-      </div>
-
+      <SideBar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
       <div className="videos-container">
-        <h4 className="category-title">
-          {selectedCategory} 
-        </h4>
-
+        <h4 className="category-title">{selectedCategory}</h4>
         <Videos videos={videos} />
       </div>
     </div>

@@ -19,7 +19,6 @@ const SearchFeed = () => {
         Search Results for <span className="highlight">{searchTerm}</span> videos
       </h4>
       <div className="videos-section">
-        <div className="spacer" />
         <Videos videos={videos} />
       </div>
     </div>

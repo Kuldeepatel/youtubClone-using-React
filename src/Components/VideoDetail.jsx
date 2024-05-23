@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
-import Videos from "./Videos";
 import Loader from "./Loader";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import "../CSS/VideoDetail.css"; 
@@ -25,29 +24,18 @@ const VideoDetail = () => {
 
   return (
     <div className="video-detail-container">
-      <div className={`video-detail-stack ${window.innerWidth >= 960 ? 'row' : 'column'}`}>
-        <div className="video-player-container">
-          <div className="video-player-wrapper">
-            <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} className="react-player" controls />
-            <div className="video-title">
-              {title}
-            </div>
-            <div className="video-info">
-              <Link to={`/channel/${channelId}`} className="channel-link">
-                <div>
-                  {channelTitle}
-                </div>
-              </Link>
-              <div className="video-stats">
-                <div>{parseInt(viewCount).toLocaleString()} views</div>
-                <div>{parseInt(likeCount).toLocaleString()} likes</div>
-              </div>
-            </div>
+      <div className="video-player-container">
+        <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} className="react-player" controls />
+        <div className="video-title">{title}</div>
+        <div className="video-info">
+          <Link to={`/channel/${channelId}`} className="channel-link">{channelTitle}</Link>
+          <div className="video-stats">
+            <div>{parseInt(viewCount).toLocaleString()} views</div>
+            <div>{parseInt(likeCount).toLocaleString()} likes</div>
           </div>
         </div>
-        <div className="related-videos">
-          <Videos videos={videos} direction="column" />
-        </div>
+      </div>
+      <div className="related-videos">
       </div>
     </div>
   );

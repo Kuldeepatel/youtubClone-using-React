@@ -8,21 +8,22 @@ import "../CSS/ChannelDetail.css";
 const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState();
   const [videos, setVideos] = useState(null);
-
   const { id } = useParams();
 
   useEffect(() => {
-    const fetchResults = async () => {
-      const data = await fetchFromAPI(`channels?part=snippet&id=${id}`);
+    const fetchData = async () => {
+      try {
+        const channelData = await fetchFromAPI(`channels?part=snippet&id=${id}`);
+        setChannelDetail(channelData?.items[0]);
 
-      setChannelDetail(data?.items[0]);
-
-      const videosData = await fetchFromAPI(`search?channelId=${id}&part=snippet%2Cid&order=date`);
-
-      setVideos(videosData?.items);
+        const videosData = await fetchFromAPI(`search?channelId=${id}&part=snippet%2Cid&order=date`);
+        setVideos(videosData?.items);
+      } catch (error) {
+        console.error("Error fetching channel data:", error);
+      }
     };
 
-    fetchResults();
+    fetchData();
   }, [id]);
 
   return (
